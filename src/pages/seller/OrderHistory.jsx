@@ -3,7 +3,7 @@ import DataTable from '../../components/DataTable';
 import StatusBadge from '../../components/StatusBadge';
 import { fetchOrders, getItemInfo, formatCurrency, formatDate } from '../../data/mockData';
 import { useAuth } from '../../components/Layout';
-import './Seller.css';
+import './seller.css';
 
 export default function OrderHistory() {
     const { user } = useAuth();

@@ -4,7 +4,7 @@ import { useAuth } from '../../components/Layout';
 import Button from '../../components/Button';
 import Card from '../../components/Card';
 import { fetchItemTypes, insertListing } from '../../data/mockData';
-import './Seller.css';
+import './seller.css';
 
 export default function AddProduct() {
     const { user } = useAuth();

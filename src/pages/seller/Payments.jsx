@@ -4,7 +4,7 @@ import DataTable from '../../components/DataTable';
 import StatusBadge from '../../components/StatusBadge';
 import { useAuth } from '../../components/Layout';
 import { fetchPayments, formatCurrency, formatDate } from '../../data/mockData';
-import './Seller.css';
+import './seller.css';
 
 export default function Payments() {
     const { user } = useAuth();

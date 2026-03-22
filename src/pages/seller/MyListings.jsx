@@ -3,7 +3,7 @@ import DataTable from '../../components/DataTable';
 import StatusBadge from '../../components/StatusBadge';
 import { useAuth } from '../../components/Layout';
 import { fetchListings, getItemInfo, formatCurrency, formatDate } from '../../data/mockData';
-import './Seller.css';
+import './seller.css';
 
 export default function MyListings() {
     const { user } = useAuth();

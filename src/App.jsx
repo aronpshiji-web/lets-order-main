@@ -6,8 +6,8 @@ import Landing from './pages/Landing';
 import Login from './pages/Login';
 
 // Seller
-import SellerDashboard from './pages/seller/SellerDashboard';
-import AddProduct from './pages/seller/AddProduct';
+import SellerDashboard from './pages/seller/sellerDashboard';
+import AddProduct from './pages/seller/Addproduct';
 import MyListings from './pages/seller/MyListings';
 import ClusterStatus from './pages/seller/ClusterStatus';
 import OrderHistory from './pages/seller/OrderHistory';

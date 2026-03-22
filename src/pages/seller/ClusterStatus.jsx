@@ -2,7 +2,7 @@ import { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../components/Layout';
 import { fetchClusters, fetchItemTypes, formatCurrency } from '../../data/mockData';
-import './Seller.css';
+import './seller.css';
 
 export default function ClusterStatus() {
     const { user } = useContext(AuthContext);
