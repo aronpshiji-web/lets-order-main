@@ -1,0 +1,78 @@
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+}
+
+.status-sm {
+    padding: 3px 10px;
+    font-size: var(--text-xs);
+}
+
+.status-md {
+    padding: 5px 14px;
+    font-size: var(--text-sm);
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.status-success {
+    background: #D8F3DC;
+    color: #1B4332;
+}
+
+.status-success .status-dot {
+    background: #2D6A4F;
+}
+
+.status-warning {
+    background: #FFF3CD;
+    color: #856404;
+}
+
+.status-warning .status-dot {
+    background: #E9A820;
+}
+
+.status-danger {
+    background: #FFE0E0;
+    color: #8B1A1A;
+}
+
+.status-danger .status-dot {
+    background: #D64045;
+}
+
+.status-info {
+    background: #DBEAFE;
+    color: #1E40AF;
+}
+
+.status-info .status-dot {
+    background: #3A86FF;
+}
+
+.status-primary {
+    background: var(--color-primary-50);
+    color: var(--color-primary-dark);
+}
+
+.status-primary .status-dot {
+    background: var(--color-primary);
+}
+
+.status-default {
+    background: var(--color-bg-input);
+    color: var(--color-text-secondary);
+}
+
+.status-default .status-dot {
+    background: var(--color-text-muted);
+}

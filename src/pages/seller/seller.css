@@ -1,0 +1,897 @@
+/* ===== STITCH SELLER DASHBOARD ===== */
+.stitch-seller-dashboard {
+    padding-bottom: 80px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Horizontal Stats Scroll */
+.stitch-stats-scroll {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 8px 20px 16px;
+    scroll-snap-type: x mandatory;
+}
+
+.stitch-stat-card {
+    position: relative;
+    min-width: 260px;
+    flex: 1;
+    overflow: hidden;
+    border-radius: 16px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+    scroll-snap-align: center;
+    transition: transform 0.2s;
+}
+
+.stitch-stat-card:hover {
+    transform: translateY(-2px);
+}
+
+.stitch-stat-card.gradient {
+    background: linear-gradient(135deg, #42d411, #36a30e);
+    border: none;
+    box-shadow: 0 0 15px rgba(66, 212, 17, 0.3);
+    color: white;
+}
+
+.stitch-stat-decor {
+    position: absolute;
+    right: -24px;
+    top: -24px;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: rgba(66, 212, 17, 0.1);
+    transition: transform 0.3s;
+}
+
+.stitch-stat-card:hover .stitch-stat-decor {
+    transform: scale(1.1);
+}
+
+.stitch-stat-decor.white {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.stitch-stat-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.stitch-stat-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stitch-stat-icon.glass {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    backdrop-filter: blur(8px);
+}
+
+.stitch-stat-badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+.stitch-stat-badge.green {
+    color: #42d411;
+    background: rgba(66, 212, 17, 0.1);
+}
+
+.stitch-stat-badge.glass {
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    font-weight: 700;
+}
+
+.stitch-stat-body {
+    margin-top: 16px;
+}
+
+.stitch-stat-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #6B7280;
+}
+
+.stitch-stat-body.light .stitch-stat-label {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.stitch-stat-value {
+    margin-top: 4px;
+    font-size: 1.875rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    color: #111b0d;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.stitch-stat-card.gradient .stitch-stat-value {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.stitch-stat-sublabel {
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Actions Row */
+.stitch-actions-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 8px 20px;
+}
+
+.stitch-action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: white;
+    border: 1px solid #E5E7EB;
+    color: #111b0d;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.stitch-action-btn:hover {
+    background: #F9FAFB;
+}
+
+.stitch-action-btn.primary {
+    background: rgba(66, 212, 17, 0.1);
+    border-color: transparent;
+    color: #42d411;
+}
+
+.stitch-action-btn.primary:hover {
+    background: rgba(66, 212, 17, 0.2);
+}
+
+.stitch-action-btn .material-symbols-outlined {
+    font-size: 20px;
+}
+
+/* Clusters Section */
+.stitch-clusters-section {
+    margin-top: 16px;
+    padding: 0 20px;
+}
+
+.stitch-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.stitch-section-header h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111b0d;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.stitch-section-header a {
+    font-size: 14px;
+    font-weight: 700;
+    color: #42d411;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.stitch-section-header a:hover {
+    color: #36a30e;
+}
+
+.stitch-cluster-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.stitch-cluster-card {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.stitch-cluster-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.stitch-cluster-img {
+    width: 96px;
+    height: 96px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #F3F4F6;
+}
+
+.stitch-cluster-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.stitch-cluster-card:hover .stitch-cluster-img img {
+    transform: scale(1.1);
+}
+
+.stitch-cluster-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4px 0;
+}
+
+.stitch-cluster-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stitch-cluster-id {
+    font-size: 12px;
+    font-weight: 700;
+    color: #9CA3AF;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stitch-cluster-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.stitch-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.stitch-cluster-info h4 {
+    margin-top: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #111b0d;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.stitch-cluster-qty {
+    font-size: 14px;
+    color: #6B7280;
+}
+
+.stitch-cluster-bottom {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #F3F4F6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #6B7280;
+    font-weight: 500;
+}
+
+.stitch-cluster-amount {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111b0d;
+}
+
+.stitch-cluster-paid {
+    font-size: 14px;
+    font-weight: 700;
+    color: #42d411;
+}
+
+/* Floating Action Button */
+.stitch-fab {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 40;
+}
+
+.stitch-fab-btn {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #42d411;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px -5px rgba(66, 212, 17, 0.5), 0 8px 10px -6px rgba(66, 212, 17, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.stitch-fab-btn:hover {
+    transform: scale(1.05);
+}
+
+.stitch-fab-btn:active {
+    transform: scale(0.95);
+}
+
+.stitch-fab-ping {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: #42d411;
+    opacity: 0.2;
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    z-index: -1;
+}
+
+/* ===== STITCH CLUSTER DETAILS ===== */
+.stitch-cluster-details {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.stitch-cluster-hero {
+    background: #1a4d2e;
+    padding: 24px 24px 48px;
+    border-radius: 0 0 32px 32px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.stitch-cluster-hero-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    border: 4px solid rgba(255, 255, 255, 0.05);
+}
+
+.stitch-cluster-hero-icon .material-symbols-outlined {
+    font-size: 40px;
+    color: #42d411;
+}
+
+.stitch-cluster-hero h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.stitch-cluster-hero p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.stitch-price-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 16px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: #FFE58F;
+    color: #4a3b2a;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.stitch-price-badge .material-symbols-outlined {
+    font-size: 18px;
+}
+
+.stitch-cluster-content {
+    margin-top: -32px;
+    padding: 0 16px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Progress Card */
+.stitch-progress-card,
+.stitch-contribution-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e8e3dc;
+}
+
+.stitch-progress-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.stitch-progress-title h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #4a3b2a;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.stitch-progress-title .material-symbols-outlined {
+    color: #42d411;
+}
+
+.stitch-active-tag {
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(66, 212, 17, 0.1);
+    color: #42d411;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stitch-progress-desc {
+    color: #8c7e6c;
+    font-size: 14px;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.stitch-progress-desc span {
+    font-weight: 700;
+    color: #42d411;
+}
+
+.stitch-progress-bar {
+    position: relative;
+    width: 100%;
+    height: 32px;
+    background: #f0f2eb;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.stitch-progress-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #42d411;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 12px;
+    transition: width 1s ease-out;
+}
+
+.stitch-progress-fill span {
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.stitch-progress-stripe {
+    position: absolute;
+    inset: 0;
+    opacity: 0.1;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-size: 1rem 1rem;
+}
+
+.stitch-progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 500;
+    color: #8c7e6c;
+}
+
+.stitch-bonus-row {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px dashed #e8e3dc;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.stitch-bonus-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #FFF4E5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stitch-bonus-icon .material-symbols-outlined {
+    font-size: 20px;
+    color: #EA580C;
+}
+
+.stitch-bonus-text p:first-child {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4a3b2a;
+}
+
+.stitch-bonus-text p:last-child {
+    font-size: 12px;
+    color: #8c7e6c;
+}
+
+/* Contribution */
+.stitch-contribution-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 16px;
+}
+
+.stitch-contribution-label {
+    font-size: 14px;
+    color: #8c7e6c;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.stitch-contribution-value {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #4a3b2a;
+}
+
+.stitch-contribution-value span {
+    font-size: 18px;
+    font-weight: 500;
+    color: #8c7e6c;
+    margin-left: 4px;
+}
+
+.stitch-contribution-est {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #42d411;
+}
+
+.stitch-increase-btn {
+    width: 100%;
+    background: #42d411;
+    color: white;
+    font-weight: 700;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 14px 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(66, 212, 17, 0.3);
+    transition: all 0.2s;
+}
+
+.stitch-increase-btn:hover {
+    background: #3bc20e;
+}
+
+.stitch-increase-btn:active {
+    transform: scale(0.98);
+}
+
+/* Seller List */
+.stitch-sellers-section {
+    padding: 0 16px;
+}
+
+.stitch-seller-item {
+    background: white;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e8e3dc;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.stitch-seller-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.stitch-seller-meta {
+    flex: 1;
+    min-width: 0;
+}
+
+.stitch-seller-meta p:first-child {
+    font-size: 14px;
+    font-weight: 700;
+    color: #4a3b2a;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.stitch-seller-meta p:last-child {
+    font-size: 12px;
+    color: #8c7e6c;
+}
+
+.stitch-seller-kg {
+    text-align: right;
+}
+
+.stitch-seller-kg span:first-child {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #4a3b2a;
+}
+
+.stitch-seller-verified {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    justify-content: flex-end;
+}
+
+.stitch-seller-verified span:first-child {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #22C55E;
+}
+
+.stitch-seller-verified span:last-child {
+    font-size: 10px;
+    color: #16A34A;
+    font-weight: 500;
+}
+
+.stitch-seller-teaser {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    padding: 12px;
+    border: 1px dashed #e8e3dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #8c7e6c;
+    font-size: 14px;
+}
+
+.stitch-seller-teaser .material-symbols-outlined {
+    font-size: 18px;
+}
+
+.stitch-support-btn {
+    width: 100%;
+    background: white;
+    border: 1px solid #e8e3dc;
+    color: #4a3b2a;
+    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 14px 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 8px;
+}
+
+.stitch-support-btn:hover {
+    background: #F9FAFB;
+}
+
+.stitch-support-btn .material-symbols-outlined {
+    color: #8c7e6c;
+}
+
+/* ===== ADD PRODUCT FORM ===== */
+.add-product-page {
+    padding: var(--space-4);
+}
+
+.add-product-page h2 {
+    margin-bottom: var(--space-6);
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+}
+
+.form-group input,
+.form-group select {
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: var(--text-base);
+    background: var(--color-bg-card);
+    transition: border var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.1);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+}
+
+.voice-input-section {
+    text-align: center;
+    padding: var(--space-6) 0;
+}
+
+.voice-btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-3);
+    font-size: var(--text-3xl);
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+    transition: transform var(--transition-base);
+}
+
+.voice-btn:hover {
+    transform: scale(1.05);
+}
+
+.voice-btn.listening {
+    animation: pulse 1.5s ease infinite;
+    box-shadow: 0 0 0 0 rgba(45, 106, 79, 0.4), var(--shadow-lg);
+}
+
+.submit-product-btn {
+    margin-top: var(--space-4);
+}
+
+.success-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.success-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    text-align: center;
+    max-width: 320px;
+    animation: scaleIn 0.3s ease;
+}
+
+.success-card .check-icon {
+    font-size: 64px;
+    color: var(--color-success);
+    margin-bottom: var(--space-4);
+}
+
+/* ===== MINI TABLE (used in MyListings, OrderHistory, Payments) ===== */
+.seller-page {
+    padding: var(--space-4);
+}
+
+.seller-page h2 {
+    margin-bottom: var(--space-6);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+    .stitch-stat-card {
+        min-width: 220px;
+        padding: 16px;
+    }
+
+    .stitch-stat-value {
+        font-size: 1.5rem;
+    }
+
+    .stitch-cluster-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
